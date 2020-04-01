@@ -1,7 +1,7 @@
 body{
   margin: 0px;
   background-color: snow;
-  background-image: url(C:/CS268/Project1/bgrd.jpg);
+  background-image: url(bgrd.jpg);
   background-size: cover;
   background-attachment: fixed;
   display: flex;
