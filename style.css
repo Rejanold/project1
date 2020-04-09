@@ -8,6 +8,12 @@ body{
   align-items: center;
   justify-content: center;
   font-family: sans-serif;
+  
+}
+
+#facebook-link > img{
+  width: 75px;
+  padding-top: 5px;
 }
 
 nav{
@@ -16,12 +22,19 @@ nav{
 
 #root{
   background-color: burlywood;
+  /* position: relative; */
   margin-top: 5%;
   margin-left: 15%;
   margin-right: 15%;
+  /* left: 15%; */
+  /* right: 15%; */
   padding: 10px;
   border: 1px solid white;
   box-shadow: 0px 0px 10px black;
+  /* font-size: 34pt; */
+  width: 80%;
+  /* height: 2000px; */
+  
 }
 
 .menu{
@@ -57,16 +70,31 @@ nav{
   margin: 2px;
 }
 
-#root, #left-arm, #right-arm, footer header{
+#root, #left-arm, #right-arm, header{
   border: solid 1px burlywood;
   padding: 10px;
   border-radius: 5px;
 }
 
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, .90);
+  margin-left: 0;
+  border-radius: 5px;
+
+  
+}
 #chester{
   flex-grow: 1;
   display: flex;
   flex-direction: row;
+  font-size: 24pt;
+  /* height: 100%; */
+}
+#root > #chester{
+  height: 100%;
 }
 
 #left-arm{
@@ -99,9 +127,10 @@ li:hover{
 }
 
 #torso{
-  flex-grow: .75;
+  flex-grow: 1;
   padding:15px;
-  width: 70%;
+  width: 90%;
+  height: 100%;
 }
 
 p{
@@ -116,4 +145,94 @@ header > img{
 a{
   text-decoration: none;
   color: beige;
+}
+
+#right-arm > img{
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px black;
+  background-color: rgba(189, 123, 0, 0.548);
+  padding: 10px;
+  margin: 10px;
+  
+}
+
+
+
+@media(max-width: 600px){
+ 
+  .menu_items{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    padding-inline-start: 0px;
+    /* padding-inline-end: 5px; */
+    width: 100%;
+    
+  }
+
+  .menu_items > li{
+    border: 1px solid burlywood;
+    display: flex;
+    flex-wrap: wrap;
+    /* padding: 10%; */
+    width: 90%;
+    border-radius: 5px;
+    margin: 2px;
+    margin-top: 20px;
+    padding-top: 14%;
+    padding-bottom: 14%;
+  }
+  .menu{
+    background-color: rgba(0, 0, 0, .80);
+    color: burlywood;
+    font-family: sans-serif;
+    border: 1px solid burlywood;
+    border-bottom: 0px;
+    box-shadow: 0px 0px 10px black;
+    position: fixed;
+    z-index: 1;
+    top: 0%;
+    left: 0%;
+    /* right: 15%; */
+    border-radius: 5px;
+    width: 19%;
+    padding: 5px;
+    height: 100%;
+  }
+
+  #root{
+    margin-left: 25%;
+    margin-top: 0%;
+    margin-right: 0%;
+    /* height: 10000px; */
+  }
+  
+  #chester, #torso{
+    height: 100%;
+  }
+  img{
+    width: 15%;
+  }
+/* #right-arm{
+  display: none;
+} */
+#chester{
+  font-size: unset;
+}
+
+#right-arm{
+  padding: 0;
+}
+
+#right-arm > img{
+  width: 200px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px black;
+  background-color: rgba(189, 123, 0, 0.548);
+  padding: 5px;
+  margin: 5px;
+}
 }
